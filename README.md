@@ -1,7 +1,7 @@
 <img align="right" width="150" height="150" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/150/apple/271/rocket_1f680.png">
 
 # Fuselage
-Fuselage is a set of tools to run full-fledged Linux (or virtualized Windows) on (almost) any chromebook without the need to press ```CTRL``` ```D``` every boot.
+Fuselage is a set of tools to run full-fledged Linux (or virtualized Windows) on (almost) any new chromebook without the need to press ```CTRL``` ```D``` every boot (and full drivers!).
 It uses the Brunch framework to generate a ChromeOS ISO, and then gives instructions on how to flash a full UEFI bios to the chromebook.
 
 ### Why not use Crostini or Crouton?
@@ -10,10 +10,18 @@ Remember, with the full UEFI bios by MrChromebox, there's not many drivers for m
 ## Prerequisites
 * Check if your Chromebook is [supported](https://mrchromebox.tech/#devices) by making sure it has a ✅ under your chromebook name and the ```UEFI Firmware
 (Full ROM)```
-* Intel 7th gen processor or newer / Geminilake
+*  Kabylake / Amberlake Intel CPU **or** an AMD Stoney Ridge CPU
 * Order a SuzyQable for 15$ (this allows you to flash a custom bios) from [Sparkfun](https://www.sparkfun.com/products/14746) or [Pimoroni](https://shop.pimoroni.com/products/suzyqable-chromeos-debug-cable)
 
 ## Installation
+
+Fire up a [Crostini](https://www.androidcentral.com/how-install-linux-apps-your-chromebook) container and type in:\
+```wget https://raw.githubusercontent.com/MilkyDeveloper/fuselage/main/brunch-setup.sh -v && sudo bash brunch-setup.sh```, enter your password and press enter.
+
+Plug in a USB that holds a capacity of 16gb or more. After that, install the [Chromebook Recovery Tool](https://chrome.google.com/webstore/detail/chromebook-recovery-utili/jndclpdbaamdhonoechobihbbiimdgai?hl=en) from the Chrome Web Store and click the settings cog on the top-right and select ```Use local image```. Navigate to the Crostini section's Downloads Folder and select ```chromeos.iso```. Follow the settings on-screen.
+
+### Flashing everything
+
 First, we need to flash MrChromebox's custom UEFI bios. As ripped from his [guide here](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD),
 
 > The install seems lengthy but it really isn't if you follow the instructions carefully
@@ -67,3 +75,7 @@ Then, punch in:\
 ```sudo firmware-util.sh```\
 
 and type in the number corresponding to ```Install/Update UEFI (Full ROM) Firmware```. Note: If the option is greyed out you did something wrong in this guide, redo it **or** double-check if your device is supported.
+
+## Usage
+
+Now all you have to do is plug in that USB. When you've booted, press ```F11``` to enter the BIOS and change the USB Boot Order. Just be sure to wait for the USB to boot for the first time (should take 30 minutes on slow chromebooks) and enable debugging features. 
