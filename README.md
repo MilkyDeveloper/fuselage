@@ -15,6 +15,8 @@ Remember, with the full UEFI bios by MrChromebox, there's not many drivers for m
 ## Installation
 First, we need to flash MrChromebox's custom UEFI bios. As ripped from his [guide here](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD),
 
+> The install seems lengthy but it really isn't if you follow the instructions carefully
+
 ### Enable Developer Mode
 * Enter Recovery Mode: press/hold ESC and Refresh, then press Power for ~1s; release all 3 keys
 * Press CTRL+D to switch to Developer Mode; confirm when prompted
@@ -27,3 +29,38 @@ First, we need to flash MrChromebox's custom UEFI bios. As ripped from his [guid
 ```sudo gsctool -a -I```\
 The CCD state should be reported as closed
 * Open the CCD:
+```sudo gsctool -a -o```\
+You will be prompted to assert physical presence (PP), which is a fancy way of saying to press the power button. Over the course of ~3 minutes, it will prompt you several times to press the power button. On the last time, the device will abruptly reboot and exit Developer Mode. Switch back to Developer Mode after this.
+
+### Disable WP / Enable Firmware Flashing
+At this point, you will need to connect the Suzy-Q cable to your ChromeOS device in a loopback manner - both ends of the cable will be connected to it. The USB-C end needs to be in the debug port (usually the left rear port on devices with multiple USB-C ports) and be facing the correct way (the debug part of the cable is not reversible). The USB-A end of the cable can connect to any open port. On devices with only USB-C ports, an adapter must be used.
+
+* Verify cable connection:
+```ls /dev/ttyUSB*```
+This command should return 3 items: ttyUSB0, ttyUSB1, and ttyUSB2 \
+If not, then your cable is connected to the wrong port or is upside down
+* Change to a root shell:
+```sudo su -```
+* Disable hardware write-protect:\
+```echo "wp false" > /dev/ttyUSB0```
+```echo "wp false atboot" > /dev/ttyUSB0```
+* Enable all CCD functionality always (allows unbricking/recovery in case CCD state is reset):
+```echo "ccd reset factory" > /dev/ttyUSB0```
+* Verify Changes:
+```gsctool -a -I``` \
+The CCD state should be opened, and the current value for all CCD flags should be set to Y/Always.
+Note: the ccd command shows the current value followed by the default value in parentheses, so you can ignore the latter. \
+```crossystem wpsw_cur```
+The current WP value should be 0
+* Now reboot the system:
+```sudo reboot```
+
+Almost done! 🎉
+
+### Flashing the firmware
+Open the shell (```CTRL``` ```ALT``` ```T```) and then enter ```shell``` in.
+
+Then, punch in:\
+```cd; curl -LO mrchromebox.tech/firmware-util.sh```
+```sudo install -Dt /usr/local/bin -m 755 firmware-util.sh```
+```sudo firmware-util.sh```
