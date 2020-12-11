@@ -1,4 +1,4 @@
-<img align="right" width="100" height="100" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/rocket_1f680.png">
+<img align="right" width="150" height="150" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/150/apple/271/rocket_1f680.png">
 
 # Fuselage
 Fuselage is a set of tools to run full-fledged Linux (or virtualized Windows) on (almost) any chromebook without the need to press ```CTRL``` ```D``` every boot.
