@@ -8,7 +8,8 @@ It uses the Brunch framework to generate a ChromeOS ISO, and then gives instruct
 Remember, with the full UEFI bios by MrChromebox, there's not many drivers for most peripherals. What this does is take those drivers of a ChromeOS install and gives you, essentialy, *dev mode* ChromeOS without actually pressing ```CTRL``` ```D``` on every boot. **Note**: in one stage of the install you will need to enter dev mode.
 
 ## Prerequisites
-* Check if your Chromebook is [supported](https://mrchromebox.tech/#devices)
+* Check if your Chromebook is [supported](https://mrchromebox.tech/#devices) by making sure it has a ✅ under your chromebook name and the ```UEFI Firmware
+(Full ROM)```
 * Intel 7th gen processor or newer / Geminilake
 * Order a SuzyQable for 15$ (this allows you to flash a custom bios) from [Sparkfun](https://www.sparkfun.com/products/14746) or [Pimoroni](https://shop.pimoroni.com/products/suzyqable-chromeos-debug-cable)
 
@@ -61,6 +62,8 @@ Almost done! 🎉
 Open the shell (```CTRL``` ```ALT``` ```T```) and then enter ```shell``` in.
 
 Then, punch in:\
-```cd; curl -LO mrchromebox.tech/firmware-util.sh```
-```sudo install -Dt /usr/local/bin -m 755 firmware-util.sh```
-```sudo firmware-util.sh```
+```cd; curl -LO mrchromebox.tech/firmware-util.sh```\
+```sudo install -Dt /usr/local/bin -m 755 firmware-util.sh```\
+```sudo firmware-util.sh```\
+
+and type in the number corresponding to ```Install/Update UEFI (Full ROM) Firmware```. Note: If the option is greyed out you did something wrong in this guide, redo it **or** double-check if your device is supported.
