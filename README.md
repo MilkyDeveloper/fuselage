@@ -24,6 +24,6 @@ First, we need to flash MrChromebox's custom UEFI bios. As ripped from his [guid
 ### Open CCD
 * Open a crosh shell: CTRL+ALT+T and then type in ```shell``` and press enter
 * Check the CCD state
-```sudo gsctool -a -I```
+```sudo gsctool -a -I```\
 The CCD state should be reported as closed
 * Open the CCD:
