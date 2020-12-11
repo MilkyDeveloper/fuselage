@@ -9,6 +9,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # CD to the home directory - just in case
+mkdir ~/Downloads
 cd ~/Downloads
 
 # This isn't strictly neccessary but is good system maintenance
