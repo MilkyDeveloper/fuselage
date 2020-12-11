@@ -9,8 +9,7 @@ Remember, with the full UEFI bios by MrChromebox, there's not many drivers for m
 
 ## Prerequisites
 * Check if your Chromebook is [supported](https://mrchromebox.tech/#devices) by making sure it has a ✅ under your chromebook name and the \
-```UEFI Firmware
-(Full ROM)```
+```UEFI Firmware (Full ROM)```
 *  Kabylake / Amberlake Intel CPU **or** an AMD Stoney Ridge CPU
 * Order a SuzyQable for 15$ (this allows you to flash a custom bios) from [Sparkfun](https://www.sparkfun.com/products/14746) or [Pimoroni](https://shop.pimoroni.com/products/suzyqable-chromeos-debug-cable)
 
