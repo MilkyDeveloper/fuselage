@@ -85,5 +85,5 @@ Now all you have to do is plug in that USB. When you've booted, press ```F11``` 
 Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just enter the following commands:
 
 ```sudo curl -Lo ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton && sudo crouton``` (to install crouton) \
-```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,kde-desktop,kde``` (to setup our chroot) \
+```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,xfce``` (to setup our chroot. If you have a touchscreen chromebook at ```,touch``` at the end of the command) \
 ```sudo enter-chroot```
