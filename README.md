@@ -86,4 +86,4 @@ Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just e
 
 ```wget -O ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton``` (to install crouton) \
 ```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,kde-desktop,kde``` (to setup our chroot) \
-```sudo enter-chroot``` \
+```sudo enter-chroot```
