@@ -84,6 +84,6 @@ Now all you have to do is plug in that USB. When you've booted, press ```F11``` 
 
 Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just enter the following commands:
 
-```wget -O ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton``` (to install crouton)
-```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,kde-desktop,kde``` (to setup our chroot)
-```sudo enter-chroot```
+```wget -O ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton``` (to install crouton)\
+```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,kde-desktop,kde``` (to setup our chroot)\
+```sudo enter-chroot```\
