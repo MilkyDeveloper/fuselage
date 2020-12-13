@@ -1,4 +1,3 @@
-<img width="750" height="562" src="https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/fuselage-mockup.png">
 <img align="right" width="150" height="150" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/150/apple/271/rocket_1f680.png">
 
 # Fuselage
