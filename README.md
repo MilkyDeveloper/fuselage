@@ -87,3 +87,11 @@ Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just e
 ```sudo curl -Lo ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton && sudo crouton``` (to install crouton)
 
 and then follow the instructions from [here](https://github.com/dnschneid/crouton/issues/4265#issuecomment-689346174) to get a working Focal Fossa install.
+
+### Windows 10 (under QEMU)
+
+Just setup that chroot as above, then it's [eazy peezy lemon squeezy](https://dennisnotes.com/note/20180614-ubuntu-18.04-qemu-setup/).
+
+### MacOS Big Sur (under QEMU)
+
+Once you've setup that stinky chroot, [use Kholia's OSX-KVM project](https://github.com/kholia/OSX-KVM).
