@@ -80,10 +80,10 @@ and type in the number corresponding to ```Install/Update UEFI (Full ROM) Firmwa
 
 Now all you have to do is plug in that USB. When you've booted, press ```F11``` to enter the BIOS and change the USB Boot Order. Just be sure to wait for the USB to boot for the first time (should take 30 minutes on slow chromebooks) and enable debugging features.
 
-### Ubuntu 20.04 with KDE and all peripherals/drivers working
+### Ubuntu 20.04 and all peripherals/drivers working
 
 Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just enter the following commands:
 
 ```sudo curl -Lo ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton && sudo crouton``` (to install crouton) \
-```sudo crouton -r focal -t xorg,audio,core,gtk-extra,x11,xfce``` (to setup our chroot. If you have a touchscreen chromebook at ```,touch``` at the end of the command) \
-```sudo enter-chroot```
+
+and then follow the instructions from [here](https://github.com/dnschneid/crouton/issues/4265#issuecomment-689346174) to get a working Focal Fossa install.
