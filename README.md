@@ -84,6 +84,6 @@ Now all you have to do is plug in that USB. When you've booted, press ```F11``` 
 
 Fire up crosh (```CTRL``` ```ALT``` ```T```) and type in ```shell```. Now just enter the following commands:
 
-```sudo curl -Lo ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton && sudo crouton``` (to install crouton) \
+```sudo curl -Lo ~/Downloads/crouton https://goo.gl/fd3zc && sudo install -Dt /usr/local/bin -m 755 ~/Downloads/crouton && sudo crouton``` (to install crouton)
 
 and then follow the instructions from [here](https://github.com/dnschneid/crouton/issues/4265#issuecomment-689346174) to get a working Focal Fossa install.
