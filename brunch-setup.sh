@@ -17,7 +17,7 @@ apt -y upgrade
 apt -y update
 
 # Install a few apt packages for building the Brunch ISO
-apt -y install pv tar cgpt wget
+apt -y install pv tar cgpt wget unzip
 
 # Check if the zip file is not downloaded; if so do it
 if [ ! -f hatch-kohaku.zip ]; then
