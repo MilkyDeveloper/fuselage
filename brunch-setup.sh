@@ -3,21 +3,21 @@
 # Script to setup a Brunch ISO and flash it to a USB
 
 # Check if script is being ran as root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run this script as root (sudo at the start of it)."
-  exit
-fi
+#if [ "$EUID" -ne 0 ]
+#  then echo "Please run this script as root (sudo at the start of it)."
+#  exit
+#fi
 
 # CD to the home directory - just in case
 mkdir ~/Downloads
 cd ~/Downloads
 
 # This isn't strictly neccessary but is good system maintenance
-apt -y upgrade
-apt -y update
+sudo apt -y upgrade
+sudo apt -y update
 
 # Install a few apt packages for building the Brunch ISO
-apt -y install pv tar cgpt wget unzip
+sudo apt -y install pv tar cgpt wget unzip
 
 # Check if the zip file is not downloaded; if so do it
 if [ ! -f hatch-kohaku.zip ]; then
