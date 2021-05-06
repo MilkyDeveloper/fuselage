@@ -63,4 +63,4 @@ if [ ! -f brunch.tar.gz ]; then
 fi
 
 # And now finally run brunch
-bash chromeos-install.sh -src $chromeosLoc -dst brunch-chromeos.bin
+sudo bash chromeos-install.sh -src $chromeosLoc -dst brunch-chromeos.bin
