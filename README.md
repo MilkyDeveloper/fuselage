@@ -1,5 +1,7 @@
 <img align="right" width="150" height="150" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/150/apple/271/rocket_1f680.png">
 
+> This project has been deprecated in favor of another project of mine, [Campfire2](github.com/milkydeveloper/Campfire2). All future work will be done there.
+
 # Fuselage
 Fuselage is a set of tools to run full-fledged Linux (or virtualized Windows) on (almost) any new chromebook without the need to press ```CTRL``` ```D``` every boot (and full drivers!).
 It uses the Brunch framework to generate a ChromeOS ISO, and then gives instructions on how to flash a full UEFI bios to the chromebook.
